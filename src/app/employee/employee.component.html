@@ -1,0 +1,51 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th attr.colspan={{columnSpan}}> <!--Attribute Binding-->
+                Employee Details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td>{{FirstName}}</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{LastName}}</td>
+        </tr>
+        <tr *ngIf='showDetails'>
+            <td>Gender</td>
+            <td>{{Gender}}</td>
+        </tr>
+        <tr *ngIf='showDetails'>
+            <td>Age</td>
+            <td>{{Age}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)='toggleView()'>
+    {{showDetails ? 'Hide' : 'Show'}} Details
+</button>
+
+<br />
+ <!--Class Binding-->
+<button class='colorClass' [class]='classesToApply'>My Button</button>
+<button class='colorClass' [class.boldClass]='applyBoldClass'>My Button</button>
+<button class='colorClass' [ngClass]='addClasses()'>My Button</button>
+
+ <!--Style Binding-->
+<button style='color:red'
+        [style.font-weight]="isBold ? 'bold' : 'normal'">
+    My Button
+</button>
+<button style='color:red'
+        [style.font-size.px]="fontSize">
+    My Button
+</button>
+<!--To set multiple inline styles use NgStyle directive as shown below-->
+
+<!--Event Binding Example :-->
+<button (click)='onClick()'>Click me</button>
+<button on-click='onClick()'>Click me</button>

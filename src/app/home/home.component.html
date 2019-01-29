@@ -1,0 +1,35 @@
+﻿<h1>This is our home page.</h1>
+<h1>
+    <label style="font-style:italic;">Interpolation</label>
+    <br />
+    <img src='http://pragimtech.com/{{imagePath}}' /> <!--Interpolation-->
+    <br />
+    <hr />
+    <label style="font-style:italic;">Property Binding</label>
+    <br />
+    <img [src]='imageFullPath' /> <!--Property Binding-->
+    <hr />
+    <label style="font-style:italic;">Interpolation</label>
+    <br />
+    {{pageHeader}}
+    <hr />
+    <label style="font-style:italic;">Nested component #1</label>
+    <br />
+    <my-employee></my-employee> <!--Nested component-->
+    <hr />
+    <label style="font-style:italic;">Nested component #2</label>
+    <br />
+    <my-2WayBinding></my-2WayBinding> <!--Nested component-->
+    <hr />
+    <label style="font-style:italic;">Nested component #3</label>
+    <br />
+    <my-employeelist></my-employeelist>
+    <hr />
+    <label style="font-style:italic;">Nested component #4</label>
+    <br />
+    <my-employeelistAsContainer></my-employeelistAsContainer>
+    <hr />
+    <label style="font-style:italic;">Services</label>
+    <br />
+    <my-employeelistAsService></my-employeelistAsService>
+</h1>
